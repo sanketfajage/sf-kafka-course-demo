@@ -2,29 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kafka-course-demo</artifactId>
+        <groupId>com.sf.kafka</groupId>
+        <version>1.0</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sf.kafka</groupId>
-    <artifactId>kafka-course-demo</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0</version>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <modules>
-        <module>simple-kafka-producer</module>
-        <module>kafka-producer-twitter</module>
-        <module>kafka-elasticsearch-consumer</module>
-    </modules>
+    <artifactId>simple-kafka-producer</artifactId>
 
     <dependencies>
         <dependency>
@@ -37,11 +22,6 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.25</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.twitter</groupId>
-            <artifactId>hbc-core</artifactId>
-            <version>2.2.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
